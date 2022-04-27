@@ -76,26 +76,7 @@ body {
   padding: 0 0 38px
 }
 
-.h3,
-h3 {
-  font-size: 1.56rem
-}
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500
-}
 
 .text-gray,
 .card-subtitle,
@@ -104,7 +85,7 @@ h6 {
 }
 
 p {
-  font-size: 13px
+  font-size: 20px
 }
 
 .text-gray,
@@ -159,4 +140,8 @@ p {
 .searchBtn {
   height: 38px;
   background-color: #d6eef6;
+}
+
+h4{
+  font-size: 50px
 }
