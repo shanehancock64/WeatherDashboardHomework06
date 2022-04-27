@@ -5,9 +5,18 @@ let date = document.getElementById('date')
 let location1 = document.getElementById('location1')
 let degrees = document.getElementById('degrees')
 let weatherType = document.getElementById('weatherType')
+let weatherIcon = document.getElementById('icon')
 let windSpeed = document.getElementById('windSpeed')
 let uv = document.getElementById('uv')
 let humid = document.getElementById('humid')
+let day1 = document.getElementById('day-1')
+let day2 = document.getElementById('day-2')
+let day3 = document.getElementById('day-3')
+let day4 = document.getElementById('day-4')
+let day5 = document.getElementById('day-5')
+let day6 = document.getElementById('day-6')
+let day7 = document.getElementById('day-7')
+
 // API KEY 
 const APIkey = '7eeba36f0b72d40a8ac6bc40ea28ebfa';
 // Getting LAT and LONG
@@ -40,23 +49,44 @@ function getApi() {
         degrees.innerHTML = data.current.temp + ' °F';
         // Display current sky conditions
         weatherType.innerHTML = data.current.weather[0].main;
+        //icon 
+        var iconCode = data.current.weather[0].icon; 
+        weatherIcon.src="http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+        //weatherIcon.innerHTML.src = "http://openweathermap.org/img/wn/"+ data.current.weather[0].icon +"@2x.png";
         // Display % Humidity 
         humid.innerHTML = data.current.humidity + ' % Humidity';
         // Display wind speed
-        windSpeed.innerHTML = data.current.wind_speed + ' MPH';
+        windSpeed.innerHTML = data.current.wind_speed + ' MPH Wind';
         // Display UV Index
         uv.innerHTML = data.current.uvi + ' UV Index';
         // Display Day 
         dayOfWeek.innerHTML = moment().format('dddd');
         // Display date and time
         date.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
+        // 7 day forecast 
+         day1.innerHTML = data.daily[1].temp.day
+         day2.innerHTML = data.daily[2].temp.day
+         day3.innerHTML = data.daily[3].temp.day
+         day4.innerHTML = data.daily[4].temp.day
+         day5.innerHTML = data.daily[5].temp.day
+         day6.innerHTML = data.daily[6].temp.day
+         day7.innerHTML = data.daily[7].temp.day
+         
+
+         console.log(iconCode);
+          
+      
       })
+      
+      
+      
+      
       
       
    })
   
     
-   //$('#degrees').replaceWith(data.current.temp)
+   
   
     
     
