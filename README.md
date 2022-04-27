@@ -21,7 +21,7 @@ If you type in the name of a city and click search results will appear displayin
 
 9.) Next 7 day forecast. 
 
-Github Link: 
+Github Link:  https://shanehancock64.github.io/WeatherDashboardHomework06/
 
 <img src="/Users/michaelhancock/WeatherDashboardHomework06/images/Screen Shot 2022-04-27 at 4.41.33 PM.png">
 <img width="1728" alt="Screen Shot 2022-04-27 at 4 41 33 PM" src="https://user-images.githubusercontent.com/99372824/165649126-ccd22cb8-7834-441b-8b49-208e71e25b08.png">
