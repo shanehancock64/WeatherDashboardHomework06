@@ -22,7 +22,7 @@ const APIkey = '7eeba36f0b72d40a8ac6bc40ea28ebfa';
 // Getting LAT and LONG
 function getApi() {
   var city = searchInfo.value.trim();
-  const getGeoLocation = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=5&appid=' + APIkey
+  const getGeoLocation = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=5&appid=' + APIkey
   console.log(getGeoLocation);
   fetch(getGeoLocation)
     .then(function (response) {
@@ -51,7 +51,7 @@ function getApi() {
         weatherType.innerHTML = data.current.weather[0].main;
         //icon 
         var iconCode = data.current.weather[0].icon; 
-        weatherIcon.src="http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+        weatherIcon.src="https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
         //weatherIcon.innerHTML.src = "http://openweathermap.org/img/wn/"+ data.current.weather[0].icon +"@2x.png";
         // Display % Humidity 
         humid.innerHTML = data.current.humidity + ' % Humidity';
